@@ -16,6 +16,6 @@ const sendMessageToKafka = async (req, res) => {
   }
 };
 
-const constrollers = { sendMessageToKafka };
+const controllers = { sendMessageToKafka };
 
-export default constrollers;
+export default controllers;

@@ -1,12 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
-import constrollers from "./controller.js";
+import controllers from "./controller.js";
 import KafkaConfig from "./config.js";
 
 const app = express();
 const jsonParser = bodyParser.json();
 
-app.post("/api/send", jsonParser, constrollers.sendMessageToKafka);
+app.post("/api/send", jsonParser, controllers.sendMessageToKafka);
 
 // consume from topic "test-topic"
 const kafkaConfig = new KafkaConfig();
